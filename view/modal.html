@@ -1,0 +1,92 @@
+<!-- add overlayer -->
+<div class="modal fade" id="addModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4>添加联系人</h4>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group">
+						<label for="username">姓名:</label>
+						<input type="text" id="username" ng-model="add.name" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="age">年龄:</label>
+						<input type="number" id="age" ng-model="add.age" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="phone">电话:</label>
+						<input type="text" id="phone" ng-model="add.phone" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="job">职业:</label>
+						<input type="text" id="job" ng-model="add.job" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="button" class="btn btn-primary btn-block" value="提交" ng-click="addContactor()">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- add end -->
+<!-- delete warning -->
+<div class="modal fade" id="delModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body clearfix">
+				<div class="alert alert-warning">
+					<p>您正在执行删除操作,点击删除后，数据将不可恢复</p>
+					<p class="text-danger">删除联系人:{{personData[curIndex].name}}</p>
+				</div>
+				<div class="pull-right">
+					<button class="btn btn-danger" ng-click="dele()">删除</button>
+					<button class="btn btn-default" ng-click="cancel()">取消</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- warning end -->
+<!-- edit panel -->
+<div class="modal fade" id="editModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4>编辑联系人</h4>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group">
+						<label for="e_user">姓名</label>
+						<input type="text" id="e_user" ng-model="edit.name" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="e_phone">电话</label>
+						<input type="text" id="e_phone" ng-model="edit.phone" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="e_job">职业</label>
+						<input type="text" id="e_job" ng-model="edit.job" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="e_age">年龄</label>
+						<input type="text" id="e_age" ng-model="edit.age" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="button" class="btn btn-primary btn-block" value="提交" ng-click="editCfm()">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- edit end -->

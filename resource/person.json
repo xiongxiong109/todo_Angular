@@ -1,0 +1,26 @@
+[
+	{
+		"name":"Bear",
+		"age":25,
+		"job":"Designer",
+		"phone":"13566321452"
+	},
+	{
+		"name":"Xiong",
+		"age":16,
+		"job":"practicer",
+		"phone":"15896574521"
+	},
+	{
+		"name":"Bear",
+		"age":25,
+		"job":"Designer",
+		"phone":"13566321452"
+	},
+	{
+		"name":"Xiong",
+		"age":16,
+		"job":"practicer",
+		"phone":"15896574521"
+	}
+]

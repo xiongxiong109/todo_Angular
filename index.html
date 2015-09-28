@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" ng-app="ngContactor">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/app.css">
+</head>
+<body ng-controller="ngList">
+	<!-- header -->
+	<tplhead></tplhead>
+	<!-- header end -->
+	<!-- 联系人控件 -->
+	<div class="container">
+		<div class="panel clearfix">
+			<button class="btn btn-default" data-toggle="modal" data-target="#addModal"><span class="glyphicon glyphicon-user"></span>添加联系人</button>
+			<button class="btn btn-default pull-right" ng-click="toggleEdit()"><span class="glyphicon glyphicon-trash"></span>编辑/删除</button>
+		</div>
+	</div>
+	<!-- 联系人控件end -->
+	<!-- 联系人列表 -->
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				联系人列表
+			</div>
+			<!-- ng-list -->
+			<div class="panel-body">
+				<ul class="list-group">
+					<li class="list-group-item clearfix" ng-repeat="person in personData">
+						<span class="delete glyphicon glyphicon-remove pull-right" 
+						ng-show="isEdit"
+						ng-click="showWarning($index)"
+						></span>
+						<h4>姓名:{{person.name}}<small>年龄:{{person.age}}</small></h4>
+						<p>电话:{{person.phone}}</p>
+						<p>工作:{{person.job}}</p>
+						<span class="edit glyphicon glyphicon-edit pull-right" ng-show="isEdit" ng-click="showEdit($index)"></span>
+					</li>
+				</ul>
+			</div>
+			<!-- ng-list end -->
+		</div>
+	</div>
+	<!-- 联系人列表 end -->
+	<tploverlayer></tploverlayer>
+	<script type="text/javascript" src="./lib/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="./lib/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./lib/angular/angular.min.js"></script>
+	<script type="text/javascript" src="./lib/angular/angular-resource.min.js"></script>
+	<script type="text/javascript" src="./js/app.js"></script>
+</body>
+</html>
